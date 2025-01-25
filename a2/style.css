@@ -1,0 +1,107 @@
+/* AV: COLOR PALETTE: https://colorhunt.co/palette/faf7f0d8d2c2b174574a4947 */
+
+body {
+background-image:url(images/pexels-hngstrm-1939485.jpg); /* Add background image here */
+background-position: right top;
+background-size: cover; /* AV: Stretches background image to full viewport */
+}
+
+
+/* AV: Header/Title Styles */
+
+header 
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    margin: 0px;
+    width: 100%;
+    background-color: lightgray;
+    text-align: center;
+    z-index: 10;
+}
+
+#title 
+{
+margin: 15px 0;
+font-family: 'RobotoRegular'; /* AV: Imported font from OpenFontLibrary */
+color: #b45910;
+font-weight: bold;
+font-style: normal;
+font-size: 36px;
+}
+
+
+/* AV: Container Layout Styles*/
+
+#container 
+{
+margin-top: 7%;
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 5%;
+}
+
+
+/* AV: Row and Tile Styles */
+
+.white
+{
+width: 10%;
+height: 60px;
+background-color: white;
+float: left;
+}
+
+.black
+{
+width: 10%;
+height: 60px;
+background-color: #787878;
+float: left;
+}
+
+.black img, .white img 
+{
+    margin: 15px 0;
+}
+
+.row 
+{
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+
+/* AV: NOTE: This applies a single top and left border to each element, then a bottom and right border to the last tile of each row */
+/* AV: This fixes the '2px border' overlap you see in adjacent tiles */
+.row > div {
+    width: calc(12.5% - 1.125px); /* AV: Centers the board by splitting up elements roughly 100/8. This includes a 1.125px buffer for the borders. */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.row > div:last-child {
+    border-right: 1px solid black;
+}
+
+/* AV: This applies a bottom border to the last row of tiles */
+#container > .row:last-child div {
+    border-bottom: 1px solid black;
+}
+
+/* AV: Clearfix */
+.clear {
+clear: both;
+}
+
+/* AV: Footer Styles */
+#footer {
+border: solid 1px;
+padding: 10px;
+margin: 10px;
+background-color: #888888; /* TODO: Add Footer Background Color */
+}
