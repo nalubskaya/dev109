@@ -1,82 +1,84 @@
-* {
-    font-family: Arial, Verdana, sans-serif;
-    color: black;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-#header {
-    padding: 1em;  /* Adds space inside the header */
-}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Liquid Layout</title>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/dodgy-ultra" type="text/css"/>
+    <link rel="stylesheet" href="https://nalubskaya.github.io/dev109/m06/lstyle.css" type="text/css">	
+</head>
 
-h1 {
-    font-family: 'Dodgy Ultra Ultra';
-    font-weight: normal;
-    font-style: normal;
-    margin: 0.9em 0;  
-    padding: 0.7em; 
-}
-h1 {
-    font-family: 'Dodgy Ultra Ultra';
-    font-weight: normal;
-    font-style: normal;
-}
+<body>
+    <div id="header">
+        <h1>Logo</h1>
+        <div id="nav">
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Learning Center</a></li>
+                <li><a href="#">Studio Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Artist Gallery</a></li>
+            </ul>
+        </div>
+    </div>
 
-#content {
-    overflow: auto;
-    display: flex ;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    </div>
+    <div id="content">
+    <!-- New 4 Columns Above Feature -->
+    <div class="article column1">
+        <p>Column One</p>
+    </div>
+    <div class="article column2">
+        <p>Column Two</p>
+    </div>
+    <div class="article column3">
+        <p>Column Three</p>
+    </div>
+    <div class="article column4">
+        <p>Column Four</p>
+    </div>
 
-#nav, #feature, #footer {
-    margin: 3%;
-}
+    <div class="article column5">
+        <p>Column Five</p>
+    </div>
+    <div class="article column6">
+        <p>Column Six</p>
+    </div>
+    <div class="article column7">
+        <p>Column Seven</p>
+    </div>
+    <div class="article column8">
+        <p>Column Eight</p>
+    </div>
 
-#nav {
+    <div class="article column5">
+        <p>Column Five</p>
+    </div>
+    <div class="article column6">
+        <p>Column Six</p>
+    </div>
+    <div class="article column7">
+        <p>Column Seven</p>
+    </div>
+    <div class="article column8">
+        <p>Column Eight</p>
+    </div>
+
+   <div class="feature">
+        <p>Feature 1</p>
+    </div>
+    <div class="feature">
+        <p>Feature 2</p>
+    </div>
+    <div class="feature">
+        <p>Feature 3</p>
+    </div>
+
+</div>
    
-    padding: 0.9em;
-}
+</body>
 
-#footer {
-    margin: 9%;
-    padding: 0.9em;
-}
-
-li {
-    display: inline;
-    padding: 0.7em;
-}
-
-/* Define styles for all 8 columns */
-.article {
-    width: 22%;  /* 4 columns per row, with space between */
-    height: 10em;
-    margin-bottom: 1em;
-    float: left;
-    display: inline-block;
-}
-
-/* Assign different background colors for better visibility */
-.column1 { background-color: #C4B7A5; }
-.column2 { background-color: #C4B7A5; }
-.column3 { background-color: #C4B7A5; }
-.column4 { background-color: #C4B7A5; }
-.column5 { background-color: #C4B7A5; }
-.column6 { background-color: #C4B7A5; }
-.column7 { background-color: #C4B7A5; }
-.column8 { background-color: #C4B7A5; }
-
-/* Feature Sections */
-.feature {
-    width: 100%;
-    height: 7em;
-    margin-bottom: 1em;
-    background-color: #C4B7A5;
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-    text-align: center;
-    line-height: 4em;
-    font-size: 1.2em;
-}
+</html>
 
