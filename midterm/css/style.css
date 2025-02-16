@@ -56,6 +56,13 @@ body
 {
     color: #007bff;
 }
+img.artImage
+{
+  box-shadow: 4px 4px 4px #999;
+  transition: all 200ms ease-in-out;
+  width: 300px;
+  height: auto;
+}
 /* footer navigation Styles links 2025*/
 
 .foot-links a:hover,
