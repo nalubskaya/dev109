@@ -1,13 +1,4 @@
-<!-- styles.css -->
 /* Reset and Base Styles */
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
- /* 	Add background image
-	Stretches background image to full viewport 
-   	background-color: #f4f4f4; use for team site */
 body 
 {
     font-family: 'Arial', sans-serif;
@@ -27,23 +18,20 @@ body
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	position: sticky;
 	top: 0;
-	
 }
 .nav-brand {
     font-family: 'ArchivoNarrowRegular';
     font-size: 1.5rem;
     font-weight: bold;
-    color: ##5B5983;
+    color: #5B5983;
     margin-bottom: 1rem;
 }
-
 .nav-links {
     list-style: none;
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
 }
-
 .nav-links a {
     text-decoration: none;
     color: #666;
@@ -58,11 +46,12 @@ body
 }
 img.artImage
 {
-  box-shadow: 4px 4px 4px #999;
+	box-shadow: 4px 4px 4px #999;
   transition: all 200ms ease-in-out;
   width: 300px;
   height: auto;
 }
+
 /* footer navigation Styles links 2025*/
 
 .foot-links a:hover,
@@ -90,6 +79,9 @@ img.artImage
     width: 100%;
     padding: 1rem;
 }
+.content-section {
+    margin-bottom: 2rem;
+}
 /* Main Content Styles Welcome to My Portfolio section N*/
 .hero {
     text-align: center;
@@ -109,6 +101,10 @@ img.artImage
 .subtitle {
     font-size: 1.2rem;
     color: #666;
+}
+li
+{
+	    color: #666;
 }
 /* Main Content Styles about me section  N*/
 .about-me {
