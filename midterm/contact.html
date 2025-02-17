@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - My Portfolio Dev 109</title>
     <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" media="screen" href="https://fontlibrary.org/en/face/archivo-narrow" type="text/css"/>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/en/face/archivo-narrow" type="text/css">
 </head>
 <body>
     <!-- Navigation Section -->
     <nav class="navbar">
         <div class="nav-brand">Natalia Lubskaya-Dev 109</div>
         <ul class="nav-links">
-            <li><a href="index.html" >Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="artifacts.html">Artifacts</a></li>
@@ -23,39 +23,49 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
+    <!-- Main Content Section -->
+  <main class="main-content">
         <div class="content-container">
             <h1>Contact</h1>
-            <p>You can review here </p>
-            
             <!-- Example Content -->
-            <section class="content-section">
-                <h2>Section Title</h2>
-                <p>
+		<div class="skills-grid">
 			
-		</p> 
-	    </section>
-            
+			<div class="skill-item">
             <section class="content-section">
-                <h2>Another Section</h2>
-                <p></p>  
-	    </section>
-        </div>
-    </main>   
-    <!-- Footer -->
+                <h2>Get in touch</h2>
+                <p>This is where your text starts. You can click here and start typing. 
+				</p>
+		<form action="thankyou.html" method="get" name="myContact" onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+       </form>
+			</section>
+			</div>
+			</div>
+		</div>
+	</main>
+     <!-- Footer -->
     <footer>
-        <p><div class="foot-links">
+<br>
+		<div class="foot-links">
             <a href="home.html">Home</a> |
             <a href="about.html">About</a> |
             <a href="courses.html">Courses</a> |
-            <a href="artifacts.html">Artifacts</a> |
+            <a href="artifacts.html" class="active">Artifacts</a> |
             <a href="modules.html">Modules</a> |
             <a href="contact.html">Contact</a> |
             <a href="creative.html">Creative</a> |
             <a href="validation.html">Validation</a> |
-        <br>© 2025 My Portfolio. All rights reserved.</p>
-	</div>
+        <br>© 2025 My Portfolio. All rights reserved.
+		</div>
     </footer>
 </body>
 </html>
