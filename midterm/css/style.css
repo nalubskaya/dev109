@@ -51,7 +51,13 @@ img.artImage
   width: 300px;
   height: auto;
 }
-
+img.artImage2
+{
+	box-shadow: 4px 4px 4px #999;
+  transition: all 200ms ease-in-out;
+  width: 230px;
+  height: auto;
+}
 /* footer navigation Styles links 2025*/
 
 .foot-links a:hover,
