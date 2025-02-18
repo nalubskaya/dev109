@@ -51,9 +51,18 @@ img.artImage
   width: 300px;
   height: auto;
 }
+/* validation page images style*/
 img.artImage2
 {
-	box-shadow: 4px 4px 4px #999;
+  box-shadow: 4px 4px 4px #999;
+  transition: all 200ms ease-in-out;
+  width: 400px;
+  height: auto;
+}
+/* hobby images style*/
+img.artImage22
+{
+  box-shadow: 4px 4px 4px #999;
   transition: all 200ms ease-in-out;
   width: 230px;
   height: auto;
@@ -74,7 +83,6 @@ img.artImage2
     font-weight: 200;
     transition: color 0.3s ease;
 }
-
 /* Main Content Styles Welcome to My Portfolio section N*/
 .content 
 {
@@ -162,7 +170,16 @@ li
     text-align: center;
     color: #666;
 }
-
+.row {
+    display: flex;
+    gap: 20px;
+}
+.column {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+        }
 footer {
     font-size: 12px;
     background-color: #DFDEE4;
