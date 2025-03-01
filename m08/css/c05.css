@@ -117,7 +117,13 @@ p {
   font-size: 14px; 
   margin: 4px 2px; 
 }
-
+/* Styling for the text entry for new items some padding*/
+#itemText
+{
+ font-size: 14px; 
+  margin: 4px 2px; 
+  padding: 8px 10px; 
+}
 #scriptResults {
 	padding-bottom: 10px;}
 
