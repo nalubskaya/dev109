@@ -104,6 +104,19 @@ p {
 	margin: 20px auto 20px auto;
 	min-width: 20%; 
 	max-width: 80%; }
+/* Styling for the button  Center the text Add some padding*/
+#addButton 
+{
+  background-color: #d7666b;
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  font-size: 14px; 
+  margin: 4px 2px; 
+}
 
 #scriptResults {
 	padding-bottom: 10px;}
