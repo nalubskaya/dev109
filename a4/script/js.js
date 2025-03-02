@@ -1,68 +1,82 @@
-function validateForm(){
-//1) create a variable to control status of each field. Assume that they are not valid
-
-//2) create variables to read the values from html text inputs
-
-//3) do the validation
-
-//4) send error messages 
-
-//5) return the status of each field
-
-//1) ////////////Create variable FirstName//////////////////////////////////
-var validFirstname=false;
-//2) read value from HTML
-var firstname = document.getElementById("firstname").value;
-//3) Do validation
-if (firstname==="null" || firstname==="" || firstname.length > 20)
-    errorMessages += "<p>The firstname is required and cannot be greater than 20 characters</p>";
-else
-   validFirstname = true;
-//4) Send error message to HTML
-document.getElementById("errorMessages").innerHTML = errorMessages;
-
-//5) return status of each field
-return (validFirstname);
-
-//1) //////////////////Create variable LastName//////////////////////////////////////
-var validLastname=false;
-//2) read value from HTML
-var validLastname = document.getElementById("lastname").value;
-
-//3) Do validation
-//4) Send error message to HMTL
-//5) return status of each field
-return (validFirstname && validLastname);
-
-/////////////Email//////////////////////////////////
-	var userEmail = document.getElementById("email").value;
-	var errorElement = document.getElementById("emailError");
-	var atpos = userEmail.indexOf("@");
-	var dotpos = userEmail.lastIndexOf(".");
-	document.getElementById("email").classList.remove("error-input");
-    errorElement.style.display = "none";	
-     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
-// Display error message in bold red text
-         errorElement.style.display = "block";
-         alert("Please enter a valid email address")
-		 document.getElementById("email").classList.add("error-input");
-         document.getElementById("email").focus() ;
-         return false;
-      }
-      return( true );
-   
-
-///////////////////////Phone validation////////////////
-var phone = document.getElementById("phone").value;
-if (isNaN(phone) || phone.lenght >15 || phone===null || phone==="")
-//send error message. For example errorMessages = "<p>Invalid phone number </p>";
-else
-  return true; //Or assign the value to a variable. For example validPhone = true;
-
-//You can also do pattern matching by using the match() method from the string object
-var numbers=/^[0-9]+$/;
-if (phone===null||phone ==="" ||phone.length>15|| !phone.match(numbers))
-//...
-else
-//...
+function validateForm() {
+    // Reset error messages
+    var errorMessages = "";
+    document.getElementById("errorMessages").innerHTML = "";
+    
+    // 1) Create variables to track validation status
+    var validFirstname = false;
+    var validLastname = false;
+    var validEmail = false;
+    var validPhone = false;
+    
+    // 2) Read values from HTML
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+    var userEmail = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    
+    // Reset styling
+    document.getElementById("firstname").classList.remove("error-input");
+    document.getElementById("lastname").classList.remove("error-input");
+    document.getElementById("email").classList.remove("error-input");
+    document.getElementById("phone").classList.remove("error-input");
+    
+    // Hide email error message
+    var errorElement = document.getElementById("emailError");
+    if (errorElement) {
+        errorElement.style.display = "none";
+    }
+    
+    // 3) Validate first name
+    if (firstname === null || firstname === "" || firstname.length > 20) {
+        errorMessages += "<p style='color: red; font-weight: bold;'>The firstname is required and can't be greater than 20 characters</p>";
+        document.getElementById("firstname").classList.add("error-input");
+    } else {
+        validFirstname = true;
+    }
+    
+    // Validate last name
+    if (lastname === null || lastname === "" || lastname.length > 20) {
+        errorMessages += "<p style='color: red; font-weight: bold;'>The lastname is required and can't be greater than 20 characters</p>";
+        document.getElementById("lastname").classList.add("error-input");
+    } else {
+        validLastname = true;
+    }
+    
+    // Validate phone number using pattern matching
+    var numbers = /^[0-9]+$/;
+    if (phone === null || phone === "" || phone.length > 15 || !phone.match(numbers)) {
+        errorMessages += "<p style='color: red; font-weight: bold;'>Please enter a valid phone number (numbers only, maximum 15 digits)</p>";
+        document.getElementById("phone").classList.add("error-input");
+        document.getElementById("phone").focus();
+    } else {
+        validPhone = true;
+    }
+    
+    // Display name and phone validation errors
+    document.getElementById("errorMessages").innerHTML = errorMessages;
+    
+    // Validate email
+    var atpos = userEmail.indexOf("@");
+    var dotpos = userEmail.lastIndexOf(".");
+    
+    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= userEmail.length) {
+        // Display email error message
+        if (errorElement) {
+            errorElement.style.display = "block";
+            errorElement.innerHTML = "<p style='color: red; font-weight: bold;'>Please enter a valid email address</p>";
+        } else {
+            // If emailError element doesn't exist, add to general error messages
+            errorMessages += "<p style='color: red; font-weight: bold;'>Please enter a valid email address</p>";
+            document.getElementById("errorMessages").innerHTML = errorMessages;
+        }
+        
+        document.getElementById("email").classList.add("error-input");
+        document.getElementById("email").focus();
+    } else {
+        validEmail = true;
+    }
+    
+    // Return overall validation status
+    return (validFirstname && validLastname && validEmail && validPhone);
 }
