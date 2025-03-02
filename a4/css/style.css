@@ -3,7 +3,7 @@ body
 {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-image:url("../images/image333.JPG");
+	background-image:url("../images/image333.JPG");
     background-position: right top;
     background-size: cover; 
     min-height: 100vh;
@@ -48,37 +48,49 @@ body
 /* form image on thank you page format NL form A04*/
 img.artImage
 {
-  box-shadow: 4px 4px 4px #999;
+	box-shadow: 4px 4px 4px #999;
   transition: all 200ms ease-in-out;
   width: 300px;
   height: auto;
 }
-/* error message format  NL form A04*/
-.error-message 
-{
-            color: red;
-            font-weight: bold;
-            margin-top: 5px;
-            display: none; /* Hidden by default */
-}     
-.error-input 
-{
-            border: 2px solid red;
-}
-label 
- {
-margin-bottom: 5px;
-font-weight: bold;
- }
 /* form image on thank you page format NL form A04*/
 .form-group 
 {
  margin-bottom: 15px;
 }
-
+/* form image on thank you page format NL form A04
+.form-row 
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+ }
+ form image on thank you page format NL form A04*/
 .form-row .form-group 
 {
      flex: 1 1 200px;
+ }
+/* error message format  NL form A04*/
+.error-message 
+{ 
+	color: red;
+    font-weight: bold;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+ }	 
+.error-input 
+{
+    border: 2px solid red;
+}
+#errorMessages
+{
+color:red;
+font-weight: bold;
+}
+label 
+ {
+margin-bottom: 5px;
+font-weight: bold;
  }
 
 /* Main Content Styles Welcome to My Portfolio section N*/
@@ -117,7 +129,7 @@ font-weight: bold;
 }
 li
 {
-	    color: #666;
+	color: #666;
 }
 /* Main Content Styles about me section  N*/
 .about-me {
@@ -302,4 +314,4 @@ select {
             padding: 15px;
             margin-top: 15px;
         }
-/*natalia css for the data box ends here*/
+
