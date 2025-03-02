@@ -48,10 +48,22 @@ body
 /* form image on thank you page format NL form A04*/
 img.artImage
 {
-	box-shadow: 4px 4px 4px #999;
+  box-shadow: 4px 4px 4px #999;
   transition: all 200ms ease-in-out;
   width: 300px;
   height: auto;
+}
+/* error message format  NL form A04*/
+.error-message 
+{
+            color: red;
+            font-weight: bold;
+            margin-top: 5px;
+            display: none; /* Hidden by default */
+}     
+.error-input 
+{
+            border: 2px solid red;
 }
 /* form image on thank you page format NL form A04*/
 .form-group 
