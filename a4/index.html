@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Progress - Test</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/en/face/archivo-narrow" type="text/css">
+</head>
+<body>
+  <!-- Navigation Section -->
+  <nav class="navbar">
+    <div class="nav-brand">Contact Us Form </div>
 
+  </nav>
+
+  <!-- Main Content Section -->
+  <main class="main-content">
+        <div class="content-container">
+            <h1>Input Form</h1>
+            <!-- Example Content -->
+		<div class="skills-grid">
+			
+			<div class="skill-item">
+				<section class="content-section">
+				<!--h2></h2-->
+				<p>Please enter your information below</p>
+				<!-- starting entry input from user-->
+				 <form id="registrationForm" action="thankyou.html" method="POST" onsubmit="return validateForm();">
+				<!-- Comments -->
+				<div class="form-group">
+					<label for="nameF">First Name</label>
+					<input type="text" id="nameF"/><br>
+					<label for="nameL">Last Name</label>
+					<input type="text" id="nameL"/><br>
+					<label for="email">Email</label>
+					<input type="text" id="email"/><br>
+					<label for="comments">Comments</label>
+					<input type="text" id="comments" name="comments"/><br>
+				</div>				 
+			<!-- Submit Button -->
+				<div class="form-group">
+					<button type="submit">Submit</button>
+				</div>
+        </form>
+			</section>
+			</div>
+		</div>
+		</div>
+  </main>
+  <!-- Include the survey script -->
+  <script src="javascript/script.js"></script>
+</body>
+</html>
