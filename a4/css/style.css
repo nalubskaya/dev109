@@ -65,55 +65,21 @@ img.artImage
 {
             border: 2px solid red;
 }
+label 
+ {
+margin-bottom: 5px;
+font-weight: bold;
+ }
 /* form image on thank you page format NL form A04*/
 .form-group 
 {
  margin-bottom: 15px;
 }
-/* form image on thank you page format NL form A04
-.form-row 
-{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 15px;
- }
- form image on thank you page format NL form A04*/
+
 .form-row .form-group 
 {
      flex: 1 1 200px;
  }
-/* validation page images style*/
-img.artImage2
-{
-	box-shadow: 4px 4px 4px #999;
-  transition: all 200ms ease-in-out;
-  width: 400px;
-  height: auto;
-}
-/* hobby images style*/
-img.artImage22
-{
-	box-shadow: 4px 4px 4px #999;
-  transition: all 200ms ease-in-out;
-  width: 230px;
-  height: auto;
-}
-/* footer navigation Styles links 2025*/
-
-.foot-links a:hover,
-.foot-links a.active 
-{
-    color: #2f4f4f;
-    font-size: 14px;
-}
-.foot-links a 
-{
-    font-size: 14px;
-    text-decoration: none;
-    color: #777;
-    font-weight: 200;
-    transition: color 0.3s ease;
-}
 
 /* Main Content Styles Welcome to My Portfolio section N*/
 .content 
