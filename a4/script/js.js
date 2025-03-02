@@ -36,15 +36,21 @@ return (validFirstname && validLastname);
 
 /////////////Email//////////////////////////////////
 	var userEmail = document.getElementById("email").value;
+	var errorElement = document.getElementById("emailError");
 	var atpos = userEmail.indexOf("@");
 	var dotpos = userEmail.lastIndexOf(".");
-      
+	document.getElementById("email").classList.remove("error-input");
+    errorElement.style.display = "none";	
      if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
+// Display error message in bold red text
+         errorElement.style.display = "block";
          alert("Please enter a valid email address")
+		 document.getElementById("email").classList.add("error-input");
          document.getElementById("email").focus() ;
          return false;
       }
       return( true );
+   
 
 ///////////////////////Phone validation////////////////
 var phone = document.getElementById("phone").value;
