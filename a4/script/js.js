@@ -35,13 +35,16 @@ var validLastname = document.getElementById("lastname").value;
 return (validFirstname && validLastname);
 
 /////////////Email//////////////////////////////////
-var userEmail = document.getElementById("email").value;
-var atpos = userEmail.indexOf("@");
-var dotpos = userEmail.lastIndexOf(".");
-if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
-    // send error message. For example:  errorMessages = "<p>Invalid email</p>";
-else
-    return true; //Or assign the value to a variable. For example validEmail = true
+	var userEmail = document.getElementById("email").value;
+	var atpos = userEmail.indexOf("@");
+	var dotpos = userEmail.lastIndexOf(".");
+      
+     if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=userEmail.length) {
+         alert("Please enter a valid email address")
+         document.getElementById("email").focus() ;
+         return false;
+      }
+      return( true );
 
 ///////////////////////Phone validation////////////////
 var phone = document.getElementById("phone").value;
