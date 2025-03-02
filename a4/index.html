@@ -29,17 +29,21 @@
 				 <form id="registrationForm" action="thankyou.html" method="POST" onsubmit="return validateForm();">
 <!-- Comments -->		<fieldset>
 				<div class="form-group">
-					<label for="nameF">First Name</label>
-					<input type="text" size="20" maxlength="14" id="nameF" name="firstname" placeholder="Your name.."required/><br>
-					<label for="nameL">Last Name</label>
-					<input type="text" size="20" maxlength="20" id="nameL" name="lastname" placeholder="Your last name.." required/><br>
+					<label for="firstname">First Name</label>
+					<input type="text" size="20" maxlength="20" id="firstname" name="firstname" placeholder="Your name here.."/><br>
+					<div id="errorMessages"></div>
+					<label for="lastname">Last Name</label>
+					<input type="text" size="20" maxlength="20" id="lastname" name="lastname" placeholder="Your last name.."/><br>
+					<div id="errorMessages"></div>
 					<label for="email">Email</label>
-					<input type="text" size="20" id="email" name="email" placeholder="Your email address.." required/><br>
-					<div id="emailError" class="error-message">**Invalid email format. Please enter a correct email address.**</div>
+					<input type="text" size="20" id="email" name="email" placeholder="Your email address.." /><br>
+					 <div id="emailError" class="error-message">**Invalid email format. Please enter a correct email address.**</div>
 					<label for="phone">Phone</label>
-					<input type="text" size="20" maxlength="15" id="phone" name="phone" placeholder="Your Phone number with area code.." required/><br>
+					<input type="text" size="20" maxlength="15" id="phone" name="phone" placeholder="Your Phone number with area code.." /><br>
+					<div id="errorMessages"></div>
 					<label for="username">Username</label>
 					<input type="text" size="20" maxlength="12" id="username" name="username" placeholder="Max 12 characters.."required/><br>
+					<div id="errorMessages"></div>
 					<label for="password">Password</label>
 					<input type="text" size="20" maxlength="7" id="password" name="password" placeholder="Max 7 characters.." required/><br>
 					<label for="address">Address</label>
