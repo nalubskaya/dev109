@@ -53,6 +53,14 @@ img.artImage
   width: 300px;
   height: auto;
 }
+/* form image on thank you page format NL form A04 validation*/
+img.artImage22
+{
+box-shadow: 4px 4px 4px #999;
+  transition: all 200ms ease-in-out;
+  width: 230px;
+  height: auto;
+}
 /* form image on thank you page format NL form A04*/
 .form-group 
 {
