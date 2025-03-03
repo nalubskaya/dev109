@@ -10,7 +10,7 @@
 <body>
   <!-- Navigation Section -->
   <nav class="navbar">
-    <div class="nav-brand">Contact Us Form </div>
+    <div class="nav-brand">Contact Us Form</div>
 
   </nav>
 
@@ -23,60 +23,60 @@
 			
 			<div class="skill-item">
 				<section class="content-section">
-				<!--h2></h2-->
+				<h2>Create an Account</h2>
 				<p>Please enter your information below</p>
 				<!-- starting entry input from user-->
 				 <form id="registrationForm" action="thankyou.html" method="POST" onsubmit="return validateForm();">
+				<!-- Comments -->
 				<fieldset>
 				<div class="form-group">
 					<label for="firstname">First Name</label>
-					  <input type="text" size="20" maxlength="20" id="firstname" name="firstname" placeholder="Your name here.."/><br>
+					  <input type="text" size="20" maxlength="20" id="firstname" name="firstname" placeholder="Your name here.."><br>
 					
 					<label for="lastname">Last Name</label>
-					  <input type="text" size="20" maxlength="20" id="lastname" name="lastname" placeholder="Your last name.."/><br>
+					  <input type="text" size="20" maxlength="20" id="lastname" name="lastname" placeholder="Your last name.."><br>
 						
 					<label for="email">Email</label>
-					  <input type="text" size="20" id="email" name="email" placeholder="Your email address.." /><br>
+					  <input type="text" size="20" id="email" name="email" placeholder="Your email address.."><br>
 						<div id="emailError" class="error-message">**Invalid email format. Please enter a correct email address.**</div>
 					<label for="phone">Phone</label>
-					  <input type="text" size="20" maxlength="15" id="phone" name="phone" placeholder="Your Phone number with area code.." /><br>
+					  <input type="text" size="20" maxlength="15" id="phone" name="phone" placeholder="Your Phone number with area code.."><br>
 						
 					<label for="username">Username</label>
-					  <input type="text" size="20" maxlength="12" id="username" name="username" placeholder="Max 12 characters.."/><br>
+					  <input type="text" size="20" maxlength="12" id="username" name="username" placeholder="Max 12 characters.."><br>
 						
 					<label for="password">Password</label>
-					  <input type="text" size="20" maxlength="7" id="password" name="password" placeholder="Max 7 characters.." /><br>
+					  <input type="text" size="20" maxlength="7" id="password" name="password" placeholder="Max 7 characters.."><br>
 						
 					<label for="address">Address</label>
-					  <input type="text" size="20" id="address" name="address" /><br>
+					  <input type="text" size="20" id="address" name="address"><br>
 						
 					<label for="city">City</label>
-					  <input type="text" size="20" id="city"  name="city" /><br>
+					  <input type="text" size="20" id="city"  name="city"><br>
 					
 					<label for="state">State</label>
-					  <input type="text" size="20" id="state" name="state" /><br>
+					  <input type="text" size="20" id="state" name="state"><br>
 					
 					<!-- start for countries as needed -->
 					<label for="country">Country</label>
-					<select id="country" name="country"><br>
+					<select id="country" name="country">
 					    <option value="">Select Country</option>
                         <option value="USA">United States</option>
                         <option value="CAN">Canada</option>
 					 </select><br>
 					<!-- Add more countries as needed -->
 					<label for="zipCode">ZipCode</label>
-					<input type="text" size="20" id="zipCode" name="zipCode"/><br>
+					<input type="text" size="20" id="zipCode" name="zipCode">
 					<div id="errorMessages"></div>
 					<label for="comments">Comments</label>
-					<input type="text" id="comments" name="comments"/><br>
+					<input type="text" id="comments" name="comments"><br>
 				</div>				 
 			<!-- Submit Button -->
 				<div class="form-group">
-					<button type="submit">Submit</button> <input type="reset"/>
+					<button type="submit">Submit</button> <input type="reset">
 				</div>
 				</fieldset>
-        	</form>
-				
+        </form>
 			</section>
 			</div>
 		</div>
