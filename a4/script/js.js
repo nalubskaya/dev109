@@ -1,3 +1,55 @@
+	//zip code and country functions
+function validateZipCode() {	
+
+	var country = document.getElementById("country").value;
+	var zipCode = document.getElementById("zipCode").value;
+	var errorMessages = "";
+	
+	document.getElementById("zipCode").classList.remove("error-input");
+		var validZip = false;
+	    // Check if USA is selected
+    if (country === "USA") {
+        // Validate zipcode for USA (5 digits)
+        var zipRegex = /^\d{5}$/;
+        
+        if (zipCode === null || zipCode === "") {
+            errorMessages = "<p style='color: red; font-weight: bold;'>Zip code is required for USA</p>";
+            document.getElementById("zipCode").classList.add("error-input");
+        } else if (!zipRegex.test(zipCode)) {
+            errorMessages = "<p style='color: red; font-weight: bold;'>USA zip code must be 5 digits</p>";
+            document.getElementById("zipCode").classList.add("error-input");
+        } else {
+            validZip = true;
+        }
+    } else {
+        // For other countries, just make sure zipcode has a value
+        if (zipCode === null || zipCode === "") {
+            errorMessages = "<p style='color: red; font-weight: bold;'>Postal/Zip code is required</p>";
+            document.getElementById("zipCode").classList.add("error-input");
+        } else {
+            validZip = true;
+        }
+    }
+	    // Display error message if any
+    if (errorMessages !== "") {
+        // If there's a specific zipCode element in html, use it
+        var zipErrorElement = document.getElementById("zipCode");
+        if (zipErrorElement) {
+            zipErrorElement.innerHTML = errorMessages;
+            zipErrorElement.style.display = "block";
+        } else {
+            // Otherwise add to general error messages
+			var currentErrorMessages = document.getElementById("errorMessages").innerHTML;
+			errorMessages += currentErrorMessages;
+            document.getElementById("errorMessages").innerHTML = errorMessages;
+        }
+        
+        document.getElementById("zipCode").focus();
+    }
+    
+    return validZip;
+}
+
 function validateForm() {
     // Reset error messages
     var errorMessages = "";
@@ -13,6 +65,7 @@ function validateForm() {
     var validAddress = false;
     var validCity = false;
 	var validState = false;
+
     
     // 2) Read values from HTML
     var firstname = document.getElementById("firstname").value;
@@ -25,6 +78,9 @@ function validateForm() {
     var address = document.getElementById("address").value;
     var city = document.getElementById("city").value;
 	var state = document.getElementById("state").value;
+	
+	var validZip = validateZipCode();
+
     
     // Reset styling
     document.getElementById("firstname").classList.remove("error-input");
@@ -36,6 +92,7 @@ function validateForm() {
     document.getElementById("address").classList.remove("error-input");
     document.getElementById("city").classList.remove("error-input");
 	document.getElementById("state").classList.remove("error-input");
+
     
     // Hide email error message
     var errorElement = document.getElementById("emailError");
@@ -130,10 +187,12 @@ function validateForm() {
     } else {
         validState = true;
     }
-   
-        // Display name and phone validation errors
+	
+
+	  
+        // Display  validation errors
     document.getElementById("errorMessages").innerHTML = errorMessages;
 	
     // Return overall validation status
-    return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity && validState);
+    return (validFirstname && validLastname && validEmail && validPhone && validUsername && validPassword && validAddress && validCity && validState && validZip);
 }
