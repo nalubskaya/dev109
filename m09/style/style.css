@@ -1,10 +1,37 @@
 body {
     height: 200px;
-    background: blue;
+    background: #b7d5a7;
   }
-  .dot {
+/*styling dots for mouse click*/
+.dot 
+{
     height: 8px; width: 8px;
     border-radius: 4px; /* rounds corners */
     background: black;
     position: absolute;
-  }
+ }
+/*styling box container for text and click button excluded as it seems limit the dot box maybe will add later
+#boxpanel 
+{
+height: 450px;
+padding: 5px;
+background-color: rgba(255, 255, 255, 0.7);
+border-radius: 4px;
+margin: 7px;
+display: inline-block;
+}
+*/
+/*styling button on the page*/
+  button 
+{
+padding: 5px 15px;
+background: #4CAF50;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+button:hover 
+{
+background: #45a049;
+}
