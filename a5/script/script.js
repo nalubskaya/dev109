@@ -10,10 +10,13 @@ var images = [
 
 let currentImage = 0;
 let timerInterval;
+//checkslideshow state
+let isSlideshowRunning = true; 
 
 var imageElement = document.getElementById("slider-image");
 var descriptionElement = document.getElementById("image-description");
 var timerElement = document.getElementById("timer");
+var stopButton = document.getElementById("stop");
 
 
 function showImage(index) {
@@ -24,6 +27,7 @@ function showImage(index) {
 
 
 function startTimer() {
+ if (isSlideshowRunning) {
 	// Start at 4 seconds
     let timeLeft = 4; 
     timerElement.textContent = timeLeft;
@@ -37,16 +41,32 @@ function startTimer() {
             startTimer(); // Restart the timer
         }
     }, 1000);// times 1 timer
+  }
 }
 function nextImage() {
-    currentImage = (currentImage + 1) % images.length;
-    showImage(currentImage);
-    resetTimer();
+	if (isSlideshowRunning) {
+		currentImage = (currentImage + 1) % images.length;
+		showImage(currentImage);
+		resetTimer();
+	}
 }
 function previousImage() {
-    currentImage = (currentImage - 1 + images.length) % images.length;
-    showImage(currentImage);
-    resetTimer();
+	 if (isSlideshowRunning) {
+		currentImage = (currentImage - 1 + images.length) % images.length;
+		showImage(currentImage);
+		resetTimer();
+	 }
+}
+function stopImage() {
+    isSlideshowRunning = !isSlideshowRunning;
+    
+    if (isSlideshowRunning) {
+        stopButton.textContent = "Stop";
+        startTimer();
+    } else {
+        stopButton.textContent = "Start";
+        clearInterval(timerInterval);
+    }
 }
 function resetTimer() {
     clearInterval(timerInterval);
@@ -55,7 +75,7 @@ function resetTimer() {
 // Event listeners
 document.getElementById("next").addEventListener("click", nextImage);
 document.getElementById("previous").addEventListener("click", previousImage);
-
+document.getElementById("stop").addEventListener("click", stopImage);
 
 // Initial setup
 showImage(currentImage);
